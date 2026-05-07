@@ -1,9 +1,9 @@
 # PQID Scientific Data Manuscript
 
 [![Main PQID Repository](https://img.shields.io/badge/GitHub-main%20PQID%20repository-181717?logo=github)](https://github.com/Elias-Abebe-Gasparini/PQID-Dataset)
-[![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-dataset-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/datasets/Elias-Abebe-Gasparini/PQID)
+[![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-PQID%20dataset-FFD21E.svg)](https://huggingface.co/datasets/Elias-Abebe-Gasparini/PQID)
 [![Gradio Gateway](https://img.shields.io/badge/Gradio-dataset%20gateway-F97316?logo=gradio&logoColor=white)](https://huggingface.co/spaces/Elias-Abebe-Gasparini/PQID-Dataset-Gateway)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20024477.svg)](https://doi.org/10.5281/zenodo.20024477)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20024477-2F80ED.svg)](https://doi.org/10.5281/zenodo.20024477)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE.md)
 [![Cite this repository](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.cff)
 [![Fund this work](https://img.shields.io/badge/Fund-this%20research-EA4AAA?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/Elias-Abebe-Gasparini)
