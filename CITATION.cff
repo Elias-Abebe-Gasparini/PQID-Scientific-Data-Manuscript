@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this manuscript companion, its figures, or its audit materials, please cite it."
+title: "PQID Scientific Data Manuscript Companion"
+type: dataset
+authors:
+  - family-names: Gasparini
+    given-names: Elias Abebe
+  - family-names: Lee
+    given-names: Keeheon
+repository-code: "https://github.com/Elias-Abebe-Gasparini/PQID-Scientific-Data-Manuscript"
+url: "https://github.com/Elias-Abebe-Gasparini/PQID-Scientific-Data-Manuscript"
+doi: "10.5281/zenodo.20024477"
+date-released: "2026-05-07"
+license: "CC-BY-4.0"
+keywords:
+  - quantum programming
+  - instruction dataset
+  - dataset documentation
+  - scientific data
+  - license governance
+abstract: "Manuscript, figure, and audit companion repository for the Scientific Data Data Descriptor associated with the Parallel Quantum Instruction Dataset."
+preferred-citation:
+  type: article
+  title: "PQID: A License-Aware, Quality-Audited Instruction Dataset for Quantum Programming"
+  authors:
+    - family-names: Gasparini
+      given-names: Elias Abebe
+    - family-names: Lee
+      given-names: Keeheon
+  year: 2026
+  notes: "Scientific Data manuscript in preparation."

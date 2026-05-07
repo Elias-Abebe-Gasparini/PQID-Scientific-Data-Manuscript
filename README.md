@@ -4,7 +4,9 @@
 [![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-dataset-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/datasets/Elias-Abebe-Gasparini/PQID)
 [![Gradio Gateway](https://img.shields.io/badge/Gradio-dataset%20gateway-F97316?logo=gradio&logoColor=white)](https://huggingface.co/spaces/Elias-Abebe-Gasparini/PQID-Dataset-Gateway)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20024477.svg)](https://doi.org/10.5281/zenodo.20024477)
-[![License: pending](https://img.shields.io/badge/License-pending%20author%20decision-lightgrey.svg)](#license-status)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE.md)
+[![Cite this repository](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.cff)
+[![Fund this work](https://img.shields.io/badge/Fund-this%20research-EA4AAA?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/Elias-Abebe-Gasparini)
 
 This child repository contains the manuscript package for the Scientific Data
 Data Descriptor associated with the Parallel Quantum Instruction Dataset
@@ -51,10 +53,21 @@ the permissive-only public-open release view.
 
 ## License Status
 
-The license for this manuscript companion repository should be finalized before
-public release. A natural split is CC BY 4.0 for manuscript text and figures,
-with MIT or another permissive license for helper scripts, but the final choice
-should be confirmed by the authors before relying on reuse permissions.
+This manuscript companion repository is released under the Creative Commons
+Attribution 4.0 International license (CC BY 4.0). Reuse is allowed with proper
+attribution. For academic reuse, cite this repository, the associated dataset,
+and the final article when available. See `LICENSE.md` and `CITATION.cff`.
+
+The helper scripts are included to support manuscript auditability. If a
+software-specific license is needed for script reuse in another project, contact
+the authors.
+
+## Funding
+
+This work was developed as part of the PQID publication stack. Support for
+continued maintenance, dataset documentation, and interactive research
+infrastructure can be directed through GitHub Sponsors:
+<https://github.com/sponsors/Elias-Abebe-Gasparini>.
 
 ## Safety Notes
 
