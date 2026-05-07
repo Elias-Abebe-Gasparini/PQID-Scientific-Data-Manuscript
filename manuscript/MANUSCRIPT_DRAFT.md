@@ -1666,12 +1666,15 @@ scores.**
 
 **Appendix Table A8. Figure 5 `n/8` readiness-check correlation matrix.**
 
-`valid` is constant in the plotted master corpus, so its correlations are
-undefined.
+The `valid*` column records `validated_execution`. It is `1` for all
+`13,530` rows in the plotted master processable corpus, as shown in Appendix
+Table A6. The `NA` values therefore mean that the phi/Pearson correlation is
+mathematically undefined because the variable has zero variance; they do not
+indicate missing validation or unvalidated entries.
 
-| check | valid | extract | no-demo | clean | lines | gates | trusted | non-mut |
+| check | valid* | extract | no-demo | clean | lines | gates | trusted | non-mut |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| valid | NA | NA | NA | NA | NA | NA | NA | NA |
+| valid* | NA | NA | NA | NA | NA | NA | NA | NA |
 | extract | NA | 1.0000 | 1.0000 | 0.9974 | 0.1848 | 0.2085 | -0.3552 | -0.5018 |
 | no-demo | NA | 1.0000 | 1.0000 | 0.9974 | 0.1848 | 0.2085 | -0.3552 | -0.5018 |
 | clean | NA | 0.9974 | 0.9974 | 1.0000 | 0.1816 | 0.2091 | -0.3554 | -0.5005 |
