@@ -1,0 +1,34 @@
+# OS/editor state
+.DS_Store
+Thumbs.db
+.vscode/
+.history/
+~$*
+~WRL*.tmp
+*.tmp
+
+# Python/runtime noise
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Local secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*_credentials.csv
+*_accessKeys.csv
+.github_token
+
+# Raw dataset payloads do not belong in this manuscript repository
+*.jsonl
+data/
+hf_download/
+release_views/*.jsonl
+
+# Local exports and logs
+*.log
+*.err
+*.err.log

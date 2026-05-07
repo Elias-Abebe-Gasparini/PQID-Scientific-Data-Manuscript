@@ -1,0 +1,45 @@
+%% Supplementary Figure S3. Benchmark-readiness gate logic.
+flowchart TD
+    A["Candidate source row"]
+
+    A --> B["n/7 readiness checks"]
+    B --> B1["validated_execution"]
+    B --> B2["high_extraction_confidence"]
+    B --> B3["no_demo_scaffolding"]
+    B --> B4["no_cleanup_candidate"]
+    B --> B5["minimum_code_lines"]
+    B --> B6["minimum_gate_count"]
+    B --> B7["trusted_retrieval_strategy"]
+
+    B1 --> C["n/7 score: 0-7"]
+    B2 --> C
+    B3 --> C
+    B4 --> C
+    B5 --> C
+    B6 --> C
+    B7 --> C
+
+    C --> D["n/8 companion profile"]
+    D --> D1["same core checks"]
+    D --> D2["non_mutation_suite_path"]
+    D1 --> E["n/8 score: 0-8"]
+    D2 --> E
+
+    E --> F{"benchmark view"}
+    F -->|"8/8"| G["strict_n8<br/>clean generation core"]
+    F -->|"extended validated profile"| H["extended_n8<br/>broader generation"]
+    F -->|"validated but not generation-clean"| I["validated_broad_n8<br/>repair/explanation"]
+    F -->|"mutation-suite path"| J["mutation_stress_n8<br/>robustness comparison"]
+    F -->|"unvalidated or incomplete"| K["tier2_unvalidated<br/>diagnosis"]
+
+    classDef score fill:#eef2f7,stroke:#43526a,color:#111827;
+    classDef check fill:#e8f2ff,stroke:#2b5c8a,color:#102033;
+    classDef clean fill:#e8f7ee,stroke:#2f7d4f,color:#102014;
+    classDef caution fill:#fff5df,stroke:#9a6a18,color:#302000;
+    classDef diagnose fill:#fdecec,stroke:#a33a3a,color:#301010;
+
+    class A,B,C,D,E,F score;
+    class B1,B2,B3,B4,B5,B6,B7,D1,D2 check;
+    class G,H clean;
+    class I,J caution;
+    class K diagnose;

@@ -1,0 +1,29 @@
+%% Supplementary Figure S2. License-governance decision tree.
+flowchart TD
+    A["Row-level license metadata"]
+    A --> B{"license_category"}
+
+    B -->|"permissive"| C["distribution_rights_status<br/>redistributable_permissive"]
+    B -->|"copyleft"| D["distribution_rights_status<br/>redistributable_copyleft"]
+    B -->|"other"| E["distribution_rights_status<br/>review_required_other"]
+    B -->|"no_license or missing"| F["distribution_rights_status<br/>unresolved_no_license"]
+
+    C --> G["public_release_bucket<br/>public_open"]
+    D --> H["public_release_bucket<br/>public_open_with_obligations"]
+    E --> I["public_release_bucket<br/>public_review_required"]
+    F --> J["public_release_bucket<br/>restricted_internal_only"]
+
+    G --> K["Included in<br/>public_open and license_valid"]
+    H --> L["Included in<br/>license_valid with obligations"]
+    I --> M["Included only after manual review<br/>license_valid other-license subset"]
+    J --> N["Excluded from public release<br/>internal-only manifest or restricted index"]
+
+    classDef decision fill:#eef2f7,stroke:#43526a,color:#111827;
+    classDef open fill:#e8f7ee,stroke:#2f7d4f,color:#102014;
+    classDef obligation fill:#fff5df,stroke:#9a6a18,color:#302000;
+    classDef restricted fill:#fdecec,stroke:#a33a3a,color:#301010;
+
+    class A,B decision;
+    class C,G,K open;
+    class D,E,H,I,L,M obligation;
+    class F,J,N restricted;

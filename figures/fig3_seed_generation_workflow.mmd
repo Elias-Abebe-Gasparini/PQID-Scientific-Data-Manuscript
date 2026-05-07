@@ -1,0 +1,40 @@
+%% Figure 3. Quality-aware seed and paraphrase generation workflow.
+flowchart LR
+    A["Metadata-rich source corpus<br/>91,719 records"]
+    B["Seed-role manifest<br/>role, objective, target mode, reason"]
+    C["Source-code supervision branch<br/>3,002 seed rows"]
+    D["Teacher-text supervision branch<br/>88,717 seed rows"]
+
+    E["Source-code seed generation<br/>Responses API pilots and Batch API production<br/>input drafted, output = source code"]
+    F["Teacher-text seed generation<br/>role-specific model policy<br/>input and teacher_output drafted"]
+
+    G["Seed coverage audit<br/>91,719 / 91,719 seeds"]
+    H["Paraphrase generation<br/>gpt-5.4-mini, temperature 0.2<br/>five variants per seed"]
+    I["Residual-similarity retry loop<br/>progressive temperature waves, token-safe recovery"]
+    J["Canonical instruction object<br/>91,719 seeds + 458,595 paraphrases<br/>550,314 rows"]
+    K["Acceptance gate and split refresh<br/>review sidecars, remediation, train/validation/test"]
+
+    A --> B
+    B --> C --> E
+    B --> D --> F
+    E --> G
+    F --> G
+    G --> H --> I --> J --> K
+
+    B -. "roles: generate, repair, diagnose, robustness_compare" .-> G
+    E -. "stable custom_id: circuit_hash + seed_role" .-> J
+    F -. "stable custom_id: circuit_hash + seed_role" .-> J
+
+    classDef corpus fill:#eef2f7,stroke:#536276,color:#111827;
+    classDef teacher fill:#e8f2ff,stroke:#356da8,color:#102033;
+    classDef source fill:#fff4df,stroke:#9a6a18,color:#302000;
+    classDef retry fill:#fde8df,stroke:#e76f51,color:#301010;
+    classDef audit fill:#e9f7f3,stroke:#2a9d8f,color:#102a10;
+    classDef final fill:#e8f7ee,stroke:#3f8f5f,color:#102014;
+
+    class A,B corpus;
+    class D,F teacher;
+    class C,E,H source;
+    class I retry;
+    class G,K audit;
+    class J final;

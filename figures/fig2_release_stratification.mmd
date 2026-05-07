@@ -1,0 +1,32 @@
+%% Figure 2. Public release stratification from the internal instruction object.
+flowchart TD
+    A["Construction-complete internal instruction object<br/>550,314 rows"]
+
+    A --> B["Permissive license rows<br/>311,724 rows"]
+    A --> C["Copyleft license rows<br/>7,356 rows"]
+    A --> D["Manually reviewed other-license rows<br/>702 rows"]
+    A --> E["No usable license<br/>230,514 rows"]
+    A --> F["Missing license metadata<br/>18 rows"]
+
+    B --> G["Strict public fallback<br/>pqid_v1_public_open_*<br/>311,724 rows"]
+    B --> H["Recommended public release<br/>pqid_v1_license_valid_*<br/>319,782 rows"]
+    C --> H
+    D --> H
+
+    E --> I["Restricted/internal-only<br/>excluded from public release"]
+    F --> I
+
+    H --> J["Public train / validation / test<br/>255,852 / 32,088 / 31,842"]
+    G --> K["Permissive-only train / validation / test<br/>249,420 / 31,386 / 30,918"]
+
+    classDef internal fill:#eef2f7,stroke:#43526a,color:#111827;
+    classDef public fill:#e8f7ee,stroke:#2f7d4f,color:#102014;
+    classDef obligation fill:#fff5df,stroke:#9a6a18,color:#302000;
+    classDef reviewed fill:#f5e9ff,stroke:#6e4a8e,color:#22112f;
+    classDef restricted fill:#fdecec,stroke:#a33a3a,color:#301010;
+
+    class A internal;
+    class B,G,H,J,K public;
+    class C obligation;
+    class D reviewed;
+    class E,F,I restricted;

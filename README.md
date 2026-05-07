@@ -1,0 +1,58 @@
+# PQID Scientific Data Manuscript
+
+This child repository contains the manuscript package for the Scientific Data
+Data Descriptor associated with the Parallel Quantum Instruction Dataset
+(PQID).
+
+Working title:
+
+**PQID: A License-Aware, Quality-Audited Instruction Dataset for Quantum Programming**
+
+## Repository Role
+
+This repository is a manuscript and figure companion to the main PQID dataset
+repository. It is meant to make the article draft, figure assets, figure
+generation scripts, and submission-facing audit materials easier to inspect
+without exposing unrelated project planning files or internal dataset rows.
+
+## Publication Stack
+
+- Main dataset repository: <https://github.com/Elias-Abebe-Gasparini/PQID-Dataset>
+- Hugging Face dataset: <https://huggingface.co/datasets/Elias-Abebe-Gasparini/PQID>
+- Zenodo DOI: <https://doi.org/10.5281/zenodo.20024477>
+- Interactive dataset gateway: <https://huggingface.co/spaces/Elias-Abebe-Gasparini/PQID-Dataset-Gateway>
+- Gateway source repository: <https://github.com/Elias-Abebe-Gasparini/PQID-Dataset-Gateway>
+
+## Contents
+
+- `manuscript/` contains the Markdown manuscript draft and the current
+  Scientific Data template DOCX export.
+- `figures/` contains manuscript and supplementary figures in PNG/SVG/PDF
+  formats, together with figure source files where available.
+- `analysis/` contains the figure-generation and license-distribution scripts
+  used for manuscript visuals and tables.
+- `docs/` contains compact public-facing documentation fragments and appendix
+  tables.
+- `submission/` contains the submission checklist used to track manuscript
+  closeout status.
+
+## Data Availability
+
+This repository does not redistribute the PQID dataset rows directly. The
+public-open dataset files are distributed through Hugging Face and archived via
+Zenodo. The manuscript describes both the license-valid internal audit view and
+the permissive-only public-open release view.
+
+## License Status
+
+The license for this manuscript companion repository should be finalized before
+public release. A natural split is CC BY 4.0 for manuscript text and figures,
+with MIT or another permissive license for helper scripts, but the final choice
+should be confirmed by the authors before relying on reuse permissions.
+
+## Safety Notes
+
+This child repository was curated from `PQID/submissions/scientific_data`.
+Private planning files, funding notes, unrelated paper drafts, raw JSONL dataset
+rows, Word temporary files, and local absolute-path traces are intentionally
+excluded.

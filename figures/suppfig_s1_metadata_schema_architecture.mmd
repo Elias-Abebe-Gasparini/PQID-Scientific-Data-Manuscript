@@ -1,0 +1,26 @@
+%% Supplementary Figure S1. Metadata schema architecture.
+flowchart LR
+    A["PQID row metadata<br/>149 documented fields"]
+
+    A --> B["Provenance<br/>source URL, repo, file path, anchors, hashes"]
+    A --> C["Repository context<br/>topics, organization flag"]
+    A --> D["Execution and validation<br/>status, materialized circuit, OpenQASM, failure class"]
+    A --> E["Circuit structure<br/>qubits, gates, depth, topology, measurements"]
+    A --> F["Gate-set and complexity<br/>Clifford/T, rotations, entanglement, parameterization"]
+    A --> G["Benchmark readiness<br/>n/7 and n/8 checks, tiers, cleaning flags"]
+    A --> H["Metadata-design overlay<br/>release, split, evidence, stance, governance"]
+    A --> I["Instruction generation<br/>seed role, prompt type, model, template, lineage"]
+    A --> J["Semantic metrics<br/>BERTScore, sentence similarity, BLEU, ROUGE-L, edit distance"]
+    A --> K["Release metadata<br/>license category, release bucket, export profile"]
+
+    classDef base fill:#eef2f7,stroke:#43526a,color:#111827;
+    classDef source fill:#e8f2ff,stroke:#2b5c8a,color:#102033;
+    classDef validation fill:#edf7ed,stroke:#3f7a3f,color:#102a10;
+    classDef generation fill:#fff4df,stroke:#9a6a18,color:#302000;
+    classDef governance fill:#f5e9ff,stroke:#6e4a8e,color:#22112f;
+
+    class A base;
+    class B,C source;
+    class D,E,F,G,J validation;
+    class I generation;
+    class H,K governance;

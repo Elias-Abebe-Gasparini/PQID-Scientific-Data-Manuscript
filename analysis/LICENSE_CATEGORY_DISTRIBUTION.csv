@@ -1,0 +1,5 @@
+license_category,rows,row_percent,unique_repositories,unique_source_keys,split_counts
+permissive,311724,56.6448,1646,51954,"{'test': 30918, 'train': 249420, 'validation': 31386}"
+no_license,230532,41.891,2733,38422,"{'test': 22782, 'train': 184728, 'validation': 23022}"
+copyleft,7356,1.3367,163,1226,"{'test': 810, 'train': 5898, 'validation': 648}"
+other,702,0.1276,8,117,"{'test': 114, 'train': 534, 'validation': 54}"

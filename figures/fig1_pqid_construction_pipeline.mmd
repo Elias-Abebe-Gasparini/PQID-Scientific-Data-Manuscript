@@ -1,0 +1,30 @@
+%% Figure 1. End-to-end PQID construction pipeline.
+flowchart LR
+    A["GitHub API acquisition<br/>91,719 raw deduplicated circuit records"]
+    B["Corpus reconstruction<br/>Python and notebook circuit extraction"]
+    C["Execution validation<br/>Qiskit execution and OpenQASM 3 export"]
+    D["Circuit enrichment<br/>structure, gate sets, topology, family, intent"]
+    E["Benchmark-readiness scoring<br/>n/7 and n/8 profiles"]
+    F["Metadata-design overlay<br/>27 audit, release, split, and governance fields"]
+    G["Quality-aware seed generation<br/>91,719 role-routed seed instructions"]
+    H["Paraphrase expansion<br/>458,595 lineage-preserving variants"]
+    I["Acceptance gate and remediation<br/>pilot review plus 282-row rewrite closeout"]
+    J["Semantic and language audits<br/>BERTScore backfill, diversity, language scope"]
+    K["License-filtered release export<br/>319,782 license-valid public rows"]
+
+    A --> B --> C --> D --> E --> F --> G --> H --> I --> J --> K
+
+    C -. "validation metadata" .-> F
+    E -. "benchmark tiers" .-> G
+    F -. "release and split fields" .-> K
+    H -. "seed/paraphrase lineage" .-> J
+
+    classDef acquisition fill:#e8f2ff,stroke:#2b5c8a,color:#102033;
+    classDef validation fill:#edf7ed,stroke:#3f7a3f,color:#102a10;
+    classDef generation fill:#fff4df,stroke:#9a6a18,color:#302000;
+    classDef governance fill:#f5e9ff,stroke:#6e4a8e,color:#22112f;
+
+    class A,B acquisition;
+    class C,D,E,J validation;
+    class G,H,I generation;
+    class F,K governance;

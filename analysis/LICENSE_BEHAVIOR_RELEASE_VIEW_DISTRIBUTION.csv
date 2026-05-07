@@ -1,0 +1,13 @@
+release_view,behavior_family,rows,view_percent
+construction corpus,no public licence detected,230532,41.89099314209705
+construction corpus,permissive / low-obligation,310974,56.50846607573131
+construction corpus,weak file/library reciprocity,1380,0.25076592636204054
+construction corpus,strong or network reciprocity,7356,1.3366914161733119
+construction corpus,attribution/content,72,0.013083439636280378
+license-valid rows,permissive / low-obligation,310974,97.2456235810646
+license-valid rows,weak file/library reciprocity,1380,0.4315439893427397
+license-valid rows,strong or network reciprocity,7356,2.300317091018256
+license-valid rows,attribution/content,72,0.022515338574403812
+public-open rows,permissive / low-obligation,310848,99.71898217654078
+public-open rows,weak file/library reciprocity,876,0.2810178234592139
+restricted rows,no public licence detected,230532,100.0
